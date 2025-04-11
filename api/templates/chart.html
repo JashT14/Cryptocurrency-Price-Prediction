@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitcoin Price Chart</title>
+</head>
+<body style="font-family: Arial; background-color: #111; color: white; text-align: center; padding-top: 40px;">
+    <h1>🪙 Bitcoin Price Chart Viewer</h1>
+
+    <form method="POST">
+        <label for="timeframe">Select Timeframe:</label>
+        <select name="timeframe">
+            {% for option in options %}
+                <option value="{{ option }}" {% if selected == option %}selected{% endif %}>{{ option }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Show Chart</button>
+    </form>
+
+    <div style="margin-top: 40px;">
+        {{ chart|safe }}
+    </div>
+</body>
+</html>

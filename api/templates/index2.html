@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitcoin Price Predictor</title>
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+    <h1>📈 Bitcoin Price Prediction</h1>
+    <form method="post">
+        <label for="future_date">📅 Enter a future date (YYYY-MM-DD):</label>
+        <input type="text" name="future_date" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <h2 style="margin-top: 30px;">{{ result }}</h2>
+    {% endif %}
+</body>
+</html>
